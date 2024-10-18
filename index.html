@@ -4,24 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>No quiero un 1.0 :c</title>
-    <h1>Mi primer pagina</h1>
+    <h1>Mi primera página</h1>
+    <link rel="stylesheet" href="css/styles.css"> 
 </head>
 <body>
 
+    <!-- Imágenes -->
+    <img src="images/1.jpg" class="active" id="img1">
+    <img src="images/2.jpg" id="img2">
+    <img src="images/3.jpg" id="img3">
     
-    <img src="images\1.jpg">
-    <a href="images\1.jpg"><button type="button1">imagen1</button></a>
+    <!-- Botones -->
+    <button type="button" onclick="showImage('img1')">Imagen 1</button>
+    <button type="button" onclick="showImage('img2')">Imagen 2</button>
+    <button type="button" onclick="showImage('img3')">Imagen 3</button>
 
-    <img src="images\2.jpg">
-    <a href="images\2.jpg"><button type="button2">imagen2</button></a>
-    
-    <img src="images\3.jpg">
-    <a href="images\3.jpg"><button type="button3">imagen3</button></a>
-    
-    <a href="pagina2.html"><button type="button4">Siguiente</button></a>
+    <a href="pagina2.html">
+        <button type="button" class="next-button">Siguiente</button>
+    </a>
 
-    
-
+    <script>
+        function showImage(imageId) {
+           
+            const images = document.querySelectorAll('img');
+            images.forEach(img => img.classList.remove('active'));
+            
+            
+            const selectedImage = document.getElementById(imageId);
+            selectedImage.classList.add('active');
+        }
+    </script>
 </body>
 </html>
-

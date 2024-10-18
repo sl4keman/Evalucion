@@ -1,0 +1,17 @@
+/* css/styles.css */
+img {
+    display: none; 
+    max-width: 100%;
+}
+img.active {
+    display: block; 
+}
+button {
+    padding: 10px 20px; 
+    margin-top: 10px; 
+    cursor: pointer; 
+}
+.next-button {
+    background-color: green; 
+    color: white; 
+}
